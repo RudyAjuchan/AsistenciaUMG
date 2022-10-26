@@ -11,6 +11,9 @@ Class Page extends Controlador{
     } 
     public function dashboard(){
         $this->vista2("pag_dashboard");
-    }   
+    }  
+    public function carreras(){
+        $this->vista2("pag_carreras");
+    } 
 }
 ?>

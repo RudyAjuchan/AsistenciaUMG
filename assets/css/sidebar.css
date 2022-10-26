@@ -1,5 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
+/*ESTILOS GENERALES DEL CONTENT*/
+.btn-umg{
+  background-color:#183e86;
+  color: white;
+  border: none;
+}
+.btn-umg:hover{
+  background-color: #445d8b;
+  color: white;
+}
+.icono{
+  position: relative;
+}
+.icono .fa-solid{
+  position: absolute;
+  padding: 12px 17px;
+  pointer-events: none;
+  display: block;
+  transition: all linear .5s;
+}
+input[type="checkbox"]{
+  position: relative;
+  width:40px;
+  height: 20px;
+  appearance: none;
+  background-color: #c6c6c6;
+  outline: none;
+  border-radius: 20px;
+  margin: 0px 5px;
+  transition: .5s;
+  box-shadow:inset 0 0 5px rgba(0, 0, 0, .2);
+
+}
+
+input:checked[type="checkbox"]{
+  background: #03a9f4;
+}
+input[type="checkbox"]:before{
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  top: 0;
+  left: 0;
+  background: #fff;
+  transition: .5s;
+  transform: scale(1.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .4);
+}
+input:checked[type="checkbox"]:before{
+  left: 20px;
+}
+/*ESTILOS GENERALES DEL CONTENT*/
+
 body{
     background: #eff5f4;
     font-family: "Poppins", sans-serif;
@@ -54,7 +109,7 @@ nav ul {
     font-size: 18px;
 }
 
-a{
+nav a{
     position: relative;
     color: rgb(85, 83, 83);
     font-size: 14px;
@@ -64,7 +119,7 @@ a{
     transition: .5s all;
 }
 
-.fa-solid{
+li .fa-solid{
     position: relative;
     width: 70px;
     height: 40px;
@@ -90,7 +145,7 @@ a{
     margin-left: 10px;    
 }
 
-a:hover{
+nav a:hover{
     background-color: #eee;
     transition: .5s all;
     color: #183e86;

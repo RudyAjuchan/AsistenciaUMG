@@ -12,6 +12,7 @@ if($_SESSION["AsisUMG_usuario"]=="" || $_SESSION["AsisUMG_usuario"]==null){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="../assets/css/sidebar.css">
     <title>Asistencia UMG</title>
 </head>
@@ -23,7 +24,7 @@ if($_SESSION["AsisUMG_usuario"]=="" || $_SESSION["AsisUMG_usuario"]==null){
                     <a href="#" class="logo"><img src="../assets/img/umg_logo.png" alt=""><span class="nav-item-custom text-white">UMG Asistencia</span></a>
                 </li>
                 <li><a href="http://localhost:8070/AsistenciaUMG/Page/dashboard"><i class="fa-solid fa-house"></i><span class="nav-item-custom">Inicio</span></a></li>
-                <li><a href="#"><i class="fa-solid fa-school"></i><span class="nav-item-custom">Carrera</span></a></li>
+                <li><a href="http://localhost:8070/AsistenciaUMG/Page/carreras"><i class="fa-solid fa-school"></i><span class="nav-item-custom">Carrera</span></a></li>
                 <li><a href="#"><i class="fa-solid fa-building-columns"></i><span class="nav-item-custom">Centro</span></a></li>
                 <li><a href="#"><i class="fa-solid fa-graduation-cap"></i><span class="nav-item-custom">Cursos</span></a></li>
 
