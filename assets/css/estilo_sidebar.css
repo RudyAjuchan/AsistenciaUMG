@@ -526,8 +526,8 @@ button {
     margin-left: -300px; }
   #sidebar .logo {
     display: block;
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
     margin: 0 auto; }
     #sidebar .logo span {
       display: block; }
