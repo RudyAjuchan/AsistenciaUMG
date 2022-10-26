@@ -77,6 +77,7 @@ nav{
     background-position: left top;    
     background-size: 300px 100px;    
     background-attachment:local;
+    z-index: 1;
 }    
 
 nav ul li a{
@@ -262,4 +263,8 @@ nav:hover li > .logout{
   position: absolute;
   top: 25px;
   right: 0px;
+}
+
+#myTable{
+  z-index: 9999;
 }
