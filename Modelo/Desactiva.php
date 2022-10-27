@@ -17,21 +17,26 @@ class Desactiva{
         }
     }
 
-<<<<<<< HEAD
-    public function DesactivarDocente($id_docente){
-        $modelo= new Conexion();
-        $conexion=$modelo->obtener_conexion();
-        $sql="update docente set activo=0 where id_Docente=:id_docente";
-        $estado=$conexion->prepare($sql);
-        $estado->bindParam(':id_docente',$id_docente);
-=======
     public function DesactivarCurso($id_curso){
         $modelo= new Conexion();
         $conexion=$modelo->obtener_conexion();
         $sql="update curso set activo=0 where id_Curso=:id_curso";
         $estado=$conexion->prepare($sql);
         $estado->bindParam(':id_curso',$id_curso);
->>>>>>> 8e4ca7bceb090b5485c5fe4407ed010e98869c97
+        if(!$estado){
+            return 'Error al guardar';
+        }else{
+            $estado->execute();
+            return 'Datos guardados con exito';
+        }
+    }
+
+    public function DesactivarDocente($id_docente){
+        $modelo= new Conexion();
+        $conexion=$modelo->obtener_conexion();
+        $sql="update docente set activo=0 where id_Docente=:id_docente";
+        $estado=$conexion->prepare($sql);
+        $estado->bindParam(':id_docente',$id_docente);
         if(!$estado){
             return 'Error al guardar';
         }else{
