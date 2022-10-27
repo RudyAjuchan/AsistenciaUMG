@@ -20,6 +20,7 @@ Class Page extends Controlador{
     public function docentes(){
         $this->vista2("pag_docentes");
     } 
+<<<<<<< HEAD
 
 
 
@@ -27,5 +28,11 @@ Class Page extends Controlador{
     public function secciones(){
         $this->vista2("pag_seccion");
     }
+=======
+    public function centros(){
+        $this->vista2("pag_centros");
+    } 
+
+>>>>>>> 38a96ea5faf16191b69b87761a15aacb20ea08d4
 }
 ?>

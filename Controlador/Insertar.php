@@ -31,6 +31,7 @@ class Insertar extends Controlador{
         return true;
     }
 
+<<<<<<< HEAD
 
 
 
@@ -46,6 +47,14 @@ class Insertar extends Controlador{
         $consultas=$this->modelo('Secciones');
         $nombre=$_POST['nombre'];
         $mensaje=$consultas->InsertarSeccion($nombre);
+=======
+    public function centro(){
+        $consultas=$this->modelo('Centros');
+        $direccion=$_POST['direccion'];
+        $departamento = $_POST['departamento'];
+        $alias = $_POST['alias'];
+        $mensaje=$consultas->InsertarCentro($direccion,$departamento, $alias);
+>>>>>>> 38a96ea5faf16191b69b87761a15aacb20ea08d4
         echo json_encode($mensaje);
         return true;
     }

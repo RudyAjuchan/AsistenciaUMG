@@ -25,6 +25,7 @@ class Activar extends Controlador{
         return true;
     }
 
+<<<<<<< HEAD
 
 
 
@@ -35,6 +36,12 @@ class Activar extends Controlador{
         $consultas=$this->modelo('Activa');
         $id_seccion=$_POST['id_seccion'];
         $mensaje=$consultas->ActivarSeccion($id_seccion);
+=======
+    public function centro(){
+        $consultas=$this->modelo('Activa');
+        $id_centro=$_POST['id_Centro'];
+        $mensaje=$consultas->ActivarCentro($id_centro);
+>>>>>>> 38a96ea5faf16191b69b87761a15aacb20ea08d4
         echo json_encode($mensaje);
         return true;
     }

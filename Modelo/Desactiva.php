@@ -45,6 +45,7 @@ class Desactiva{
         }
     }
 
+<<<<<<< HEAD
     
 
 
@@ -65,6 +66,14 @@ class Desactiva{
         $sql="update seccion set activo=0 where id_seccion=:id_seccion";
         $estado=$conexion->prepare($sql);
         $estado->bindParam(':id_seccion',$id_seccion);
+=======
+    public function DesactivarCentro($id_centro){
+        $modelo= new Conexion();
+        $conexion=$modelo->obtener_conexion();
+        $sql="update centro set activo=0 where id_Centro=:id_centro";
+        $estado=$conexion->prepare($sql);
+        $estado->bindParam(':id_centro',$id_centro);
+>>>>>>> 38a96ea5faf16191b69b87761a15aacb20ea08d4
         if(!$estado){
             return 'Error al guardar';
         }else{

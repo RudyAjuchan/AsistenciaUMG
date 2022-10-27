@@ -25,6 +25,7 @@ class Desactivar extends Controlador{
         return true;
     }
 
+<<<<<<< HEAD
 
 
 
@@ -37,6 +38,12 @@ class Desactivar extends Controlador{
         $consultas=$this->modelo('Desactiva');
         $id_seccion=$_POST['id_seccion'];
         $mensaje=$consultas->DesactivarSeccion($id_seccion);
+=======
+    public function centro(){
+        $consultas=$this->modelo('Desactiva');
+        $id_centro=$_POST['id_Centro'];
+        $mensaje=$consultas->DesactivarCentro($id_centro);
+>>>>>>> 38a96ea5faf16191b69b87761a15aacb20ea08d4
         echo json_encode($mensaje);
         return true;
     }
