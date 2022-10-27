@@ -31,6 +31,25 @@ class Insertar extends Controlador{
         return true;
     }
 
+
+
+
+
+
+
+
+
+
+
+
+    public function seccion(){
+        $consultas=$this->modelo('Secciones');
+        $nombre=$_POST['nombre'];
+        $mensaje=$consultas->InsertarSeccion($nombre);
+        echo json_encode($mensaje);
+        return true;
+    }
+
     /* public function venta($productos){
         //Para venta
         session_start();

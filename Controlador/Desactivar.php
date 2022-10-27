@@ -24,5 +24,21 @@ class Desactivar extends Controlador{
         echo json_encode($mensaje);
         return true;
     }
+
+
+
+
+
+
+
+
+
+    public function seccion(){
+        $consultas=$this->modelo('Desactiva');
+        $id_seccion=$_POST['id_seccion'];
+        $mensaje=$consultas->DesactivarSeccion($id_seccion);
+        echo json_encode($mensaje);
+        return true;
+    }
 }
 ?>

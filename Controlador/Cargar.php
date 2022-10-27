@@ -149,5 +149,100 @@ class Cargar extends Controlador{
         $consultas=$this->modelo('Busqueda');
         $filas=$consultas->buscarCarrera();
         return $filas;
-    } 
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    public function secciones(){
+        $consultas=$this->modelo('Secciones');
+
+        $filas=$consultas->buscarSeccion();
+        echo '
+            <div class="table-responsive mt-3">
+            <table class="table mt-4 table-striped" id="myTable">
+                <thead>
+                    <tr>
+                        <th>Id Seccion</th>
+                        <th>Seccion</th>
+                        <th><center>Activo</center></th>
+                        <th><center>Acción</center></th>
+                        <th><center>Actualizar</center></th>
+                    </tr>
+                </thead>
+                <tbody>
+            ';
+        if($filas){            
+            foreach($filas as $fila){
+                echo '
+                    <tr>
+                        <td>'.$fila['id_Seccion'].'</td>
+                        <td>'.$fila['seccion'].'</td>';   
+                        if($fila['activo']==1){
+                            echo '<td style="font-size: 1.5rem; color:green;" class="text-center"><i class="fa-solid fa-square-check"></i></td>';
+                        }else{
+                            echo '<td style="font-size: 1.5rem; color:red;" class="text-center"><i class="fa-solid fa-rectangle-xmark"></i></td>';
+                        }
+                        if($fila['activo']==1){
+                            echo '<td><center><i class="fa-solid fa-xmark" style="cursor:pointer;font-size: 2rem" onclick="desactivar('.$fila['id_Seccion'].')"></i></center></td>';
+                        }else{
+                            echo '<td><center><i class="fa-solid fa-check" style="cursor:pointer;font-size: 2rem" onclick="activar('.$fila['id_Seccion'].')"></i></center></td>';
+                        }
+                        echo '<td class="text-center"><button id="cargar'.$fila['id_Seccion'].'" onclick="cargar('.$fila['id_Seccion'].')"; style="border:none; background-color: transparent;font-size: 1.5rem" data-bs-toggle="modal" data-bs-target="#actualizarSeccion"><i class="fa-solid fa-user-pen"></i></button></td>
+                    </tr>
+                ';
+            }
+        }
+        echo '<tbody></table></div>';
+    }
 }

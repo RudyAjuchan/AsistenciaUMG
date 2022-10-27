@@ -32,7 +32,7 @@ if($_SESSION["AsisUMG_usuario"]=="" || $_SESSION["AsisUMG_usuario"]==null){
                 <li class="sub-btn"><a href="#"><i class="fa-solid fa-school-circle-check"></i><span class="nav-item-custom">Sección</span><i class="fa-solid fa-chevron-right"></i></a></li>
                 <div class="sub-menu">
                     <ul>
-                        <li><a href="#" class="nav-item-custom"><i class="fa-solid fa-hand-point-right"></i>Registrar Sección</a></li>
+                        <li><a href="http://localhost:8070/AsistenciaUMG/Page/secciones" class="nav-item-custom"><i class="fa-solid fa-hand-point-right"></i>Registrar Sección</a></li>
                         <li><a href="#" class="nav-item-custom"><i class="fa-solid fa-hand-point-right"></i>Asignar Carrera - Sección</a></li>
                         <li><a href="#" class="nav-item-custom"><i class="fa-solid fa-hand-point-right"></i>Asignar Sección - curso</a></li>                        
                     </ul>
@@ -54,7 +54,8 @@ if($_SESSION["AsisUMG_usuario"]=="" || $_SESSION["AsisUMG_usuario"]==null){
                     </ul>
                 </div>
                 
-                <li class="final"><a href="#"><i class="fa-solid fa-chalkboard-user"></i><span class="nav-item-custom">Alumnos</span></a></li>
+                <li><a href="#"><i class="fa-solid fa-user"></i><span class="nav-item-custom">Usuarios</span></a></li>
+                <li class="final"><a href="#"><i class="fa-solid fa-chalkboard-user"></i><span class="nav-item-custom">Alumnos</span></a></li>                
                 <li><a href="http://localhost:8070/AsistenciaUMG/Cerrar_session/cerrar" class="logout"><i class="fa-solid fa-right-from-bracket"></i><span class="nav-item-custom sp-logout">Cerrar sesión</span></a></li>
             </ul>
         </nav>

@@ -33,6 +33,25 @@ class Modificar extends Controlador{
         return true;
     }
 
+
+
+
+
+
+
+
+
+
+
+
+    public function seccion(){
+        $consultas=$this->modelo('Secciones');
+        $id_seccion=$_POST['id_seccion'];
+        $nombre=$_POST['nombre'];
+        $mensaje=$consultas->ActualizarSeccion($id_seccion, $nombre);
+        echo json_encode($mensaje);
+        return true;
+    }
     /* public function venta($productos){
          //Para venta
          session_start();

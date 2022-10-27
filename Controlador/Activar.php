@@ -24,5 +24,19 @@ class Activar extends Controlador{
         echo json_encode($mensaje);
         return true;
     }
+
+
+
+
+
+
+
+    public function seccion(){
+        $consultas=$this->modelo('Activa');
+        $id_seccion=$_POST['id_seccion'];
+        $mensaje=$consultas->ActivarSeccion($id_seccion);
+        echo json_encode($mensaje);
+        return true;
+    }
 }
 ?>

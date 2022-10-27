@@ -45,5 +45,34 @@ class Activa{
         }
     }
 
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public function ActivarSeccion($id_seccion){
+        $modelo= new Conexion();
+        $conexion=$modelo->obtener_conexion();
+        $sql="update seccion set activo=1 where id_seccion=:id_seccion";
+        $estado=$conexion->prepare($sql);
+        $estado->bindParam(':id_seccion',$id_seccion);
+        if(!$estado){
+            return 'Error al guardar';
+        }else{
+            $estado->execute();
+            return 'Datos guardados con exito';
+        }
+    }
+
 }
 ?>
