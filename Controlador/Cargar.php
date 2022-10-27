@@ -42,6 +42,7 @@ class Cargar extends Controlador{
         echo '<tbody></table></div>';
     }
 
+<<<<<<< HEAD
 
 
     //Docente 
@@ -49,11 +50,18 @@ class Cargar extends Controlador{
         $consultas=$this->modelo('Docentes');
 
         $filas=$consultas->buscarDocente();
+=======
+    public function cursos(){
+        $consultas=$this->modelo('Cursos');
+
+        $filas=$consultas->buscarCursos();
+>>>>>>> 8e4ca7bceb090b5485c5fe4407ed010e98869c97
         echo '
             <div class="table-responsive mt-3">
             <table class="table mt-4 table-striped" id="myTable">
                 <thead>
                     <tr>
+<<<<<<< HEAD
                         <th>Id Docente </th>
                         <th>Nombre</th>
                         <th>Profesion</th>
@@ -61,6 +69,15 @@ class Cargar extends Controlador{
                         <th>Direccion</th>
                         <th><center>Activo</center></th>
                         <th><center>Acción</center></th>
+=======
+                        <th>Id Curso</th>
+                        <th>Nombre</th>
+                        <th style="display: none">Id carrera</th>
+                        <th>Carrera</th>
+                        <th>Semestre</th>
+                        <th>Activo</th>
+                        <th><center>Activo</center></th>
+>>>>>>> 8e4ca7bceb090b5485c5fe4407ed010e98869c97
                         <th><center>Actualizar</center></th>
                     </tr>
                 </thead>
@@ -70,6 +87,7 @@ class Cargar extends Controlador{
             foreach($filas as $fila){
                 echo '
                     <tr>
+<<<<<<< HEAD
                         <td>'.$fila['id_Docente'].'</td>
                         <td>'.$fila['nombre'].'</td>
                         <td>'.$fila['profesion'].'</td>
@@ -81,21 +99,45 @@ class Cargar extends Controlador{
                         
                         
                           
+=======
+                        <td>'.$fila['id_Curso'].'</td>
+                        <td>'.$fila['nombre'].'</td>
+                        <td style="display: none">'.$fila['id_Carrera'].'</td>
+                        <td>'.$fila['nombreCarrera'].'</td>
+                        <td>'.$fila['semestre'].'</td>';   
+>>>>>>> 8e4ca7bceb090b5485c5fe4407ed010e98869c97
                         if($fila['activo']==1){
                             echo '<td style="font-size: 1.5rem; color:green;" class="text-center"><i class="fa-solid fa-square-check"></i></td>';
                         }else{
                             echo '<td style="font-size: 1.5rem; color:red;" class="text-center"><i class="fa-solid fa-rectangle-xmark"></i></td>';
                         }
                         if($fila['activo']==1){
+<<<<<<< HEAD
                             echo '<td><center><i class="fa-solid fa-xmark" style="cursor:pointer;font-size: 2rem" onclick="desactivar('.$fila['id_Docente'].')"></i></center></td>';
                         }else{
                             echo '<td><center><i class="fa-solid fa-check" style="cursor:pointer;font-size: 2rem" onclick="activar('.$fila['id_Docente'].')"></i></center></td>';
                         }
                         echo '<td class="text-center"><button id="cargar'.$fila['id_Docente'].'" onclick="cargar('.$fila['id_Docente'].')"; style="border:none; background-color: transparent;font-size: 1.5rem" data-bs-toggle="modal" data-bs-target="#actualizarDocente"><i class="fa-solid fa-user-pen"></i></button></td>
+=======
+                            echo '<td><center><i class="fa-solid fa-xmark" style="cursor:pointer;font-size: 2rem" onclick="desactivar('.$fila['id_Curso'].')"></i></center></td>';
+                        }else{
+                            echo '<td><center><i class="fa-solid fa-check" style="cursor:pointer;font-size: 2rem" onclick="activar('.$fila['id_Curso'].')"></i></center></td>';
+                        }
+                        echo '<td class="text-center"><button id="cargar'.$fila['id_Curso'].'" onclick="cargar('.$fila['id_Curso'].')"; style="border:none; background-color: transparent;font-size: 1.5rem" data-bs-toggle="modal" data-bs-target="#actualizarCurso"><i class="fa-solid fa-user-pen"></i></button></td>
+>>>>>>> 8e4ca7bceb090b5485c5fe4407ed010e98869c97
                     </tr>
                 ';
             }
         }
         echo '<tbody></table></div>';
     }
+<<<<<<< HEAD
+=======
+
+    public function buscarCarreras(){
+        $consultas=$this->modelo('Busqueda');
+        $filas=$consultas->buscarCarrera();
+        return $filas;
+    } 
+>>>>>>> 8e4ca7bceb090b5485c5fe4407ed010e98869c97
 }

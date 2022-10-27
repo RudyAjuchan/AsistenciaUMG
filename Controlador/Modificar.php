@@ -10,6 +10,16 @@ class Modificar extends Controlador{
         echo json_encode($mensaje);
         return true;
     }
+    public function curso(){
+        $consultas=$this->modelo('Cursos');
+        $id_curso=$_POST['id_curso'];
+        $nombre=$_POST['nombre'];
+        $semestre=$_POST['semestre'];
+        $id_carrera=$_POST['id_carreraA'];
+        $mensaje=$consultas->ActualizarCurso($nombre, $semestre, $id_carrera, $id_curso);
+        echo json_encode($mensaje);
+        return true;
+    }
 
     public function docente(){
         $consultas=$this->modelo('Docentes');

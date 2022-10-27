@@ -10,6 +10,7 @@ class Insertar extends Controlador{
         return true;
     }
 
+<<<<<<< HEAD
     public function docente(){
         $consultas=$this->modelo('Docentes');
         $nombre=$_POST['nombre'];
@@ -20,6 +21,18 @@ class Insertar extends Controlador{
         echo json_encode($mensaje);
         return true;
     }
+=======
+    public function curso(){
+        $consultas=$this->modelo('Cursos');
+        $nombre=$_POST['nombre'];
+        $semestre=$_POST['semestre'];
+        $id_carrera=$_POST['id_carrera'];
+        $mensaje=$consultas->InsertarCurso($nombre, $semestre, $id_carrera);
+        echo json_encode($mensaje);
+        return true;
+    }
+
+>>>>>>> 8e4ca7bceb090b5485c5fe4407ed010e98869c97
     /* public function venta($productos){
         //Para venta
         session_start();
