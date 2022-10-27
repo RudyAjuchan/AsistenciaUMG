@@ -9,5 +9,12 @@ class Activar extends Controlador{
         echo json_encode($mensaje);
         return true;
     }
+    public function curso(){
+        $consultas=$this->modelo('Activa');
+        $id_curso=$_POST['id_curso'];
+        $mensaje=$consultas->ActivarCurso($id_curso);
+        echo json_encode($mensaje);
+        return true;
+    }
 }
 ?>

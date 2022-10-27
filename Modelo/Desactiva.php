@@ -17,5 +17,19 @@ class Desactiva{
         }
     }
 
+    public function DesactivarCurso($id_curso){
+        $modelo= new Conexion();
+        $conexion=$modelo->obtener_conexion();
+        $sql="update curso set activo=0 where id_Curso=:id_curso";
+        $estado=$conexion->prepare($sql);
+        $estado->bindParam(':id_curso',$id_curso);
+        if(!$estado){
+            return 'Error al guardar';
+        }else{
+            $estado->execute();
+            return 'Datos guardados con exito';
+        }
+    }
+
 }
 ?>

@@ -15,5 +15,8 @@ Class Page extends Controlador{
     public function carreras(){
         $this->vista2("pag_carreras");
     } 
+    public function cursos(){
+        $this->vista2("pag_cursos");
+    }
 }
 ?>
