@@ -14,6 +14,8 @@ class Activar extends Controlador{
         $consultas=$this->modelo('Activa');
         $id_docente=$_POST['id_Docente'];
         $mensaje=$consultas->ActivarDocente($id_docente);
+        echo json_encode($mensaje);
+        return true;
     }
     public function curso(){
         $consultas=$this->modelo('Activa');
