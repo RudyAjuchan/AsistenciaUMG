@@ -33,6 +33,17 @@ class Modificar extends Controlador{
         return true;
     }
 
+    public function centro(){
+        $consultas=$this->modelo('Centros');
+        $id_centro=$_POST['id_Centro'];
+        $direccion=$_POST['direccion'];
+        $departamento=$_POST['departamento'];
+        $alias=$_POST['alias'];
+        $mensaje=$consultas->ActualizarCentro($id_centro, $direccion, $departamento, $alias);
+        echo json_encode($mensaje);
+        return true;
+    }
+
     /* public function venta($productos){
          //Para venta
          session_start();

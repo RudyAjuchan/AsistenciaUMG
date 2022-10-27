@@ -26,7 +26,7 @@ if($_SESSION["AsisUMG_usuario"]=="" || $_SESSION["AsisUMG_usuario"]==null){
                 </li>
                 <li><a href="http://localhost:8070/AsistenciaUMG/Page/dashboard"><i class="fa-solid fa-house"></i><span class="nav-item-custom">Inicio</span></a></li>
                 <li><a href="http://localhost:8070/AsistenciaUMG/Page/carreras"><i class="fa-solid fa-school"></i><span class="nav-item-custom">Carrera</span></a></li>
-                <li><a href="#"><i class="fa-solid fa-building-columns"></i><span class="nav-item-custom">Centro</span></a></li>
+                <li><a href="http://localhost:8070/AsistenciaUMG/Page/centros"><i class="fa-solid fa-building-columns"></i><span class="nav-item-custom">Centro</span></a></li>
                 <li><a href="http://localhost:8070/AsistenciaUMG/Page/cursos"><i class="fa-solid fa-graduation-cap"></i><span class="nav-item-custom">Cursos</span></a></li>
 
                 <li class="sub-btn"><a href="#"><i class="fa-solid fa-school-circle-check"></i><span class="nav-item-custom">Sección</span><i class="fa-solid fa-chevron-right"></i></a></li>

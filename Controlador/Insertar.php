@@ -31,6 +31,16 @@ class Insertar extends Controlador{
         return true;
     }
 
+    public function centro(){
+        $consultas=$this->modelo('Centros');
+        $direccion=$_POST['direccion'];
+        $departamento = $_POST['departamento'];
+        $alias = $_POST['alias'];
+        $mensaje=$consultas->InsertarCentro($direccion,$departamento, $alias);
+        echo json_encode($mensaje);
+        return true;
+    }
+
     /* public function venta($productos){
         //Para venta
         session_start();

@@ -45,5 +45,19 @@ class Activa{
         }
     }
 
+    public function ActivarCentro($id_centro){
+        $modelo= new Conexion();
+        $conexion=$modelo->obtener_conexion();
+        $sql="update centro set activo=1 where id_Centro=:id_centro";
+        $estado=$conexion->prepare($sql);
+        $estado->bindParam(':id_centro',$id_centro);
+        if(!$estado){
+            return 'Error al guardar';
+        }else{
+            $estado->execute();
+            return 'Datos guardados con exito';
+        }
+    }
+
 }
 ?>

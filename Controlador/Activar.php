@@ -24,5 +24,13 @@ class Activar extends Controlador{
         echo json_encode($mensaje);
         return true;
     }
+
+    public function centro(){
+        $consultas=$this->modelo('Activa');
+        $id_centro=$_POST['id_Centro'];
+        $mensaje=$consultas->ActivarCentro($id_centro);
+        echo json_encode($mensaje);
+        return true;
+    }
 }
 ?>

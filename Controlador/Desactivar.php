@@ -24,5 +24,13 @@ class Desactivar extends Controlador{
         echo json_encode($mensaje);
         return true;
     }
+
+    public function centro(){
+        $consultas=$this->modelo('Desactiva');
+        $id_centro=$_POST['id_Centro'];
+        $mensaje=$consultas->DesactivarCentro($id_centro);
+        echo json_encode($mensaje);
+        return true;
+    }
 }
 ?>
