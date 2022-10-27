@@ -38,7 +38,7 @@ if($_SESSION["AsisUMG_usuario"]=="" || $_SESSION["AsisUMG_usuario"]==null){
                 </div>
                 
                 <li><a href="#"><i class="fa-solid fa-calendar-days"></i><span class="nav-item-custom">Horarios</span></a></li>
-                <li><a href="#"><i class="fa-solid fa-person-chalkboard"></i><span class="nav-item-custom">Docente</span></a></li>                
+                <li><a href="http://localhost:8070/AsistenciaUMG/Page/docentes"><i class="fa-solid fa-person-chalkboard"></i><span class="nav-item-custom">Docente</span></a></li>                
                 <li><a href="#"><i class="fa-solid fa-file-pen"></i><span class="nav-item-custom">Inscripción</span></a></li>
 
                 <li class="sub-btn"><a href="#" ><i class="fa-solid fa-user-pen"></i><span class="nav-item-custom">Asistencia</span><i class="fa-solid fa-chevron-right"></i></a></li>

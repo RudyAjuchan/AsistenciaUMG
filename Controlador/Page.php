@@ -5,7 +5,6 @@ Class Page extends Controlador{
     public function aux(){
         $this->vista2("pag_login");
     }
-
     public function index(){
         $this->vista2("pag_login");
     } 
@@ -14,6 +13,9 @@ Class Page extends Controlador{
     }  
     public function carreras(){
         $this->vista2("pag_carreras");
+    } 
+    public function docentes(){
+        $this->vista2("pag_docentes");
     } 
 }
 ?>

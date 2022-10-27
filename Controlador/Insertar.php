@@ -10,6 +10,16 @@ class Insertar extends Controlador{
         return true;
     }
 
+    public function docente(){
+        $consultas=$this->modelo('Docentes');
+        $nombre=$_POST['nombre'];
+        $profesion = $_POST['profesion'];
+        $dpi = $_POST['dpi'];
+        $direccion = $_POST['direccion'];
+        $mensaje=$consultas->InsertarDocente($nombre,$profesion, $dpi, $direccion);
+        echo json_encode($mensaje);
+        return true;
+    }
     /* public function venta($productos){
         //Para venta
         session_start();

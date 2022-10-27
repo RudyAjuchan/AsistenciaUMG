@@ -9,5 +9,13 @@ class Desactivar extends Controlador{
         echo json_encode($mensaje);
         return true;
     }
+
+    public function docente(){
+        $consultas=$this->modelo('Desactiva');
+        $id_docente=$_POST['id_Docente'];
+        $mensaje=$consultas->DesactivarDocente($id_docente);
+        echo json_encode($mensaje);
+        return true;
+    }
 }
 ?>

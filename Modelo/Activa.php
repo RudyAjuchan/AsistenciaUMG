@@ -17,5 +17,19 @@ class Activa{
         }
     }
 
+    public function ActivarDocente($id_docente){
+        $modelo= new Conexion();
+        $conexion=$modelo->obtener_conexion();
+        $sql="update docente set activo=1 where id_Docente=:id_docente";
+        $estado=$conexion->prepare($sql);
+        $estado->bindParam(':id_docente',$id_docente);
+        if(!$estado){
+            return 'Error al guardar';
+        }else{
+            $estado->execute();
+            return 'Datos guardados con exito';
+        }
+    }
+
 }
 ?>
